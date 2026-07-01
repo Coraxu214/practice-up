@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  node_bundler = "esbuild"
+
+# SPA fallback — 让 React Router 的深链接刷新不 404
+# public/_redirects 已经写了 /api/* 和 /* 的规则,Netlify 会自动应用
